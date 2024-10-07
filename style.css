@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container nav .nav__list {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  list-style-type: none;
+}
+
+header .container nav .nav__list--item a {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+header .container .secondary-nav__list {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
