@@ -1,6 +1,9 @@
 :root {
   --black1: #001c1c;
   --black2: #023131;
+  --red-main: #ff2e4c;
+  --white: #fff;
+  --border-color: #bededa;
 }
 
 * {
@@ -26,6 +29,15 @@ a {
 header {
   padding: 20px 0;
   font-family: "Play";
+  border-bottom: 1px dashed var(--border-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+aside, main {
+  margin-top: 93px;
 }
 
 header .container {
@@ -61,4 +73,16 @@ header .container .secondary-nav__list {
   display: flex;
   align-items: center;
   column-gap: 25px;
+}
+
+header .container button {
+  padding: 12px 34px 10px 20px;
+  border-radius: 10px;
+  border: transparent;
+  background: var(--red-main);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
 }
