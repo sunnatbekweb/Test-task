@@ -1,95 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- PLay font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Style -->
-    <link rel="stylesheet" href="/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <a href="/" class="logo">Logo</a>
-        <nav>
-          <ul class="nav__list">
-            <li class="nav__list--item">
-              <a href="#">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- PLay font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Montserrat font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <!-- Style -->
+  <link rel="stylesheet" href="/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Logo</a>
+      <nav>
+        <ul class="nav__list">
+          <li class="nav__list--item">
+            <a href="#">
               <svg width="24" height="24">
                 <use xlink:href="/assets/icons/sprite.svg#list">
               </svg>
               <p>Все предложения</p>
             </a>
           </li>
-            <li class="nav__list--item">
-              <a href="#">Скидки</a>
-            </li>
-            <li class="nav__list--item">
-              <a href="#">Акции</a>
-            </li>
-            <li class="nav__list--item">
-              <a href="#">Промокоды</a>
-            </li>
-            <li class="nav__list--item">
-              <a href="#">Кешбэк</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="secondary-nav__list">
-          <li class="secondary-nav__list--item">
-            <a href="#">
-              <svg width="28" height="28">
-                <use xlink:href="/assets/icons/sprite.svg?v=3#search">
-              </svg>
-            </a>
+          <li class="nav__list--item">
+            <a href="#">Скидки</a>
           </li>
-          <li class="secondary-nav__list--item">
-            <a href="#">
-              <svg width="19" height="17">
-                <use xlink:href="/assets/icons/sprite.svg?v=1#telegram">
-              </svg>
-            </a>
+          <li class="nav__list--item">
+            <a href="#">Акции</a>
           </li>
-          <li class="secondary-nav__list--item">
-            <a href="#">
-              <svg width="48" height="48">
-                <use xlink:href="/assets/icons/sprite.svg?v=1#cabinet">
-              </svg>
-            </a>
+          <li class="nav__list--item">
+            <a href="#">Промокоды</a>
           </li>
-          <li class="secondary-nav__list--item">
-            <a href="#">
-              РУ
-            </a>
+          <li class="nav__list--item">
+            <a href="#">Кешбэк</a>
           </li>
         </ul>
-        <button>
-          Добавить скидку
-        </button>
+      </nav>
+      <ul class="secondary-nav__list">
+        <li class="secondary-nav__list--item">
+          <a href="#">
+            <svg width="28" height="28">
+              <use xlink:href="/assets/icons/sprite.svg?v=3#search">
+            </svg>
+          </a>
+        </li>
+        <li class="secondary-nav__list--item">
+          <a href="#">
+            <svg width="19" height="17">
+              <use xlink:href="/assets/icons/sprite.svg?v=1#telegram">
+            </svg>
+          </a>
+        </li>
+        <li class="secondary-nav__list--item">
+          <a href="#">
+            <svg width="48" height="48">
+              <use xlink:href="/assets/icons/sprite.svg?v=1#cabinet">
+            </svg>
+          </a>
+        </li>
+        <li class="secondary-nav__list--item">
+          <a href="#">
+            РУ
+          </a>
+        </li>
+      </ul>
+      <button>
+        Добавить скидку
+      </button>
+    </div>
+  </header>
+  <div class="container main">
+    <aside>
+      <h3>Скидки дня</h3>
+      <p class="saleCount">23 предложения</p>
+      <div class="card_container">
+        <div class="card">
+          <img src="/assets/images/aside_card-image.png" alt="Card image">
+          <div class="card_info">
+            <a href="#" class="company_link">Korzinka.uz</a>
+            <h5 class="card_title">В четверг скидки на рыбу</h5>
+            <div class="sales_container">
+              <a href="#" class="sale_link">Скидки</a>
+              <div class="cashback">
+                <div class="border_style">
+                  Кешбэк
+                </div>
+                <div class="background_style">
+                  3%
+                </div>
+              </div>
+            </div>
+            <p class="card_category">Супермаркеты</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/assets/images/aside_card-image1.png" alt="Card image">
+          <div class="card_info">
+            <a href="#" class="company_link">Mango</a>
+            <h5 class="card_title">Акция 1+1</h5>
+            <div class="sales_container">
+              <a href="#" class="sale_link">Акции</a>
+              <div class="cashback">
+                <div class="border_style">
+                  Кешбэк
+                </div>
+                <div class="background_style">
+                  3%
+                </div>
+              </div>
+            </div>
+            <p class="card_category">Магазины брендовой одежды</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/assets/images/aside_card-image2.png" alt="Card image">
+          <div class="card_info">
+            <a href="#" class="company_link">Texnomart</a>
+            <h5 class="card_title">До — 60% на бытовую технику в ТЦ «Samarkand </h5>
+            <div class="sales_container">
+              <a href="#" class="sale_link">Скидки</a>
+              <div class="cashback">
+                <div class="border_style">
+                  Кешбэк
+                </div>
+                <div class="background_style">
+                  3%
+                </div>
+              </div>
+            </div>
+            <p class="card_category">Магазины электроники и бытовой</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/assets/images/aside_card-image3.png" alt="Card image">
+          <div class="card_info">
+            <a href="#" class="company_link">Makro</a>
+            <h5 class="card_title">При покупке CIF пачка губок Salixan БЕСПЛАТНО</h5>
+            <div class="sales_container">
+              <a href="#" class="sale_link">Акции</a>
+              <div class="cashback">
+                <div class="border_style">
+                  Кешбэк
+                </div>
+                <div class="background_style">
+                  3%
+                </div>
+              </div>
+            </div>
+            <p class="card_category">Супермаркеты</p>
+          </div>
+        </div>
       </div>
-    </header>
-    <div class="container">
-      <aside>
-        <h3>Скидки дня</h3>
-        <p>23 предложения</p>
-      </aside>
-      <main>
+    </aside>
+    <main>
     </main>
   </div>
-    <script src="/script.js"></script>
-  </body>
+  <script src="/script.js"></script>
+</body>
+
 </html>

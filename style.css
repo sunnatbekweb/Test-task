@@ -1,9 +1,11 @@
 :root {
+  --white: #fff;
   --black1: #001c1c;
   --black2: #023131;
-  --red-main: #ff2e4c;
-  --white: #fff;
+  --gray: #607282;
   --border-color: #bededa;
+  --background-color: #f0f6f6;
+  --red-main: #ff2e4c;
 }
 
 * {
@@ -28,16 +30,13 @@ a {
 
 header {
   padding: 20px 0;
-  font-family: "Play";
+  font-family: "Play", sans-serif;
   border-bottom: 1px dashed var(--border-color);
+  background: var(--white);
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-}
-
-aside, main {
-  margin-top: 93px;
 }
 
 header .container {
@@ -79,10 +78,124 @@ header .container button {
   padding: 12px 34px 10px 20px;
   border-radius: 10px;
   border: transparent;
-  background: var(--red-main);
+  background-color: var(--red-main);
   color: var(--white);
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   line-height: 140%;
+}
+
+.main {
+  margin-top: 93px;
+}
+
+aside {
+  padding: 20px;
+  background: var(--background-color);
+  max-width: 290px;
+  font-family: "Play", sans-serif;
+}
+
+aside h3 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 115%;
+  color: var(--black2);
+}
+
+aside .saleCount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--gray);
+}
+
+.card_container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.card img {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.card .card_info {
+  border-bottom: 1px dashed var(--border-color);
+  border-left: 1px dashed var(--border-color);
+  border-right: 1px dashed var(--border-color);
+  border-radius: 0 0 10px 10px;
+  padding: 12px;
+  background: var(--white);
+}
+
+.card .card_info .company_link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.card .card_info .card_title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--black1);
+  margin-bottom: 12px;
+  height: 46px;
+}
+
+.card .card_info .sales_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.card .card_info .sales_container .cashback {
+  display: flex;
+  align-items: center;
+}
+
+.card .card_info .sales_container .sale_link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--gray);
+}
+
+.card .card_info .sales_container .cashback .border_style {
+  padding: 4px 8px 5px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--gray);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--gray);
+}
+
+.card .card_info .sales_container .cashback .background_style {
+  padding: 4px 8px 5px 8px;
+  border-radius: 4px;
+  background: var(--gray);
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--white);
+}
+
+.card .card_info .card_category {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--gray);
 }
