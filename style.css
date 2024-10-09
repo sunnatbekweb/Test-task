@@ -3,6 +3,8 @@
   --black1: #001c1c;
   --black2: #023131;
   --gray: #607282;
+  --text-color2: #3c5858;
+  --text-color: #248888;
   --border-color: #bededa;
   --background-color: #f0f6f6;
   --red-main: #ff2e4c;
@@ -11,6 +13,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -25,7 +29,6 @@ a {
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 header {
@@ -86,8 +89,10 @@ header .container button {
   line-height: 140%;
 }
 
-.main {
+.wrapper {
   margin-top: 93px;
+  display: flex;
+  column-gap: 40px;
 }
 
 aside {
@@ -118,12 +123,18 @@ aside .saleCount {
   row-gap: 20px;
 }
 
+.card {
+  background: var(--white);
+}
+
 .card img {
-  border-left: 1px solid var(--border-color);
+  /* border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color); */
   border-radius: 10px 10px 0 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card .card_info {
@@ -132,7 +143,6 @@ aside .saleCount {
   border-right: 1px dashed var(--border-color);
   border-radius: 0 0 10px 10px;
   padding: 12px;
-  background: var(--white);
 }
 
 .card .card_info .company_link {
@@ -198,4 +208,73 @@ aside .saleCount {
   font-size: 14px;
   line-height: 140%;
   color: var(--gray);
+}
+
+aside .see_all {
+  padding: 12px 34px 10px 20px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: var(--white);
+  color: var(--text-color2);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+main {
+  margin-top: 40px;
+  max-width: 970px;
+  width: 100%;
+  font-family: "Play", sans-serif;
+}
+
+main .top_sales {
+  padding: 25px 30px;
+  background: var(--background-color);
+  border-radius: 10px;
+}
+
+main .top_sales h3 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 115%;
+  color: var(--text-color);
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bedada;
+}
+
+main .top_sales .tab {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+main .top_sales .tab .tab_item {
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin: 15px 0;
+  max-width: 100%;
+}
+
+.swiper-wrapper {
+  width: fit-content;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .card {
+  width: 100%;
 }
