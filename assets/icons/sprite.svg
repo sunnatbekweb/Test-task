@@ -24,4 +24,14 @@
         <path d="M31 28V34" stroke="#FF2E4C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M34 31H28" stroke="#FF2E4C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol viewBox="0 0 32 32" id="plus" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 16H32" stroke-width="2" />
+        <path d="M16 32L16 -5.96046e-07" stroke-width="2" />
+    </symbol>
+    <symbol viewBox="0 0 32 32" id="close" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 3.00049L29 29.0005" stroke="#BEDADA" stroke-width="2" stroke-linecap="round" />
+        <path d="M3 28.9995L29 2.99954" stroke="#BEDADA" stroke-width="2" stroke-linecap="round" />
+    </symbol>
 </svg>

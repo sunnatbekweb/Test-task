@@ -40,6 +40,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 header .container {
@@ -257,9 +258,8 @@ main .top_sales .tab .tab_item {
 
 .swiper {
   width: 100%;
-  height: 100%;
-  margin: 15px 0;
-  max-width: 100%;
+  height: 355px;
+  margin: 15px 0 0 0;
 }
 
 .swiper-wrapper {
@@ -267,14 +267,107 @@ main .top_sales .tab .tab_item {
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
   background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: fit-content;
 }
 
 .swiper-slide .card {
   width: 100%;
+}
+
+main h4 {
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--black2);
+  margin-top: 70px;
+  margin-bottom: 16px;
+}
+
+main .text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--text-color2);
+}
+
+main .bold_text {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--black1);
+  margin-bottom: 12px;
+}
+
+main .light_text {
+  color: var(--gray);
+  margin-top: 12px;
+  margin-bottom: 60px;
+}
+
+main .faq_title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 115%;
+  color: var(--black2);
+  margin: 60px 0 0 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 25px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--text-color2);
+}
+
+.faq-item:hover .faq-question {
+  font-weight: 700;
+  color: var(--black2);
+}
+
+.faq-item .faq-toggle svg path {
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover .faq-toggle svg path {
+  stroke: var(--red-main);
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px 78px 0 110px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--text-color2);
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: transform 0.2s;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question {
+  font-weight: 700;
+  color: var(--black2);
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+  color: #e74c3c;
+}
+
+.faq-item.active .faq-toggle svg path {
+  stroke: var(--red-main);
 }
