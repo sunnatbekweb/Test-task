@@ -44,7 +44,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 99;
 }
 
 header .container {
@@ -74,6 +74,11 @@ header .container nav .nav__list--item a {
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
+  transition: all 0.3s ease;
+}
+
+header .container nav .nav__list--item a:hover {
+  color: var(--red-main);
 }
 
 header .container .secondary-nav__list {
@@ -92,6 +97,32 @@ header .container .header_button {
   font-weight: 700;
   font-size: 18px;
   line-height: 140%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+header .container .header_button::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--gray);
+  border: 8px solid var(--white);
+  border-radius: 50%;
+}
+
+header .container .header_button:hover::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: none;
+  right: -20px;
+  background-image: url(/assets/icons/button-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header .container .menu {
@@ -138,6 +169,13 @@ aside .saleCount {
 .card {
   background: var(--white);
   height: fit-content;
+  cursor: pointer;
+}
+
+.card:hover .card_info {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .card img {
@@ -168,6 +206,10 @@ aside .saleCount {
   color: var(--gray);
 }
 
+.card .card_info .company_link:hover {
+  color: var(--red-main);
+}
+
 .card .card_info .card_title {
   font-weight: 700;
   font-size: 18px;
@@ -175,6 +217,11 @@ aside .saleCount {
   color: var(--black1);
   margin-bottom: 12px;
   height: 46px;
+  display: block;
+}
+
+.card .card_info .card_title:hover {
+  color: var(--text-color);
 }
 
 .card .card_info .sales_container {
@@ -194,6 +241,10 @@ aside .saleCount {
   font-size: 14px;
   line-height: 140%;
   color: var(--gray);
+}
+
+.card .card_info .sales_container .sale_link:hover {
+  color: var(--red-main);
 }
 
 .card .card_info .sales_container .cashback .border_style {
@@ -234,6 +285,31 @@ aside .see_all {
   font-weight: 700;
   font-size: 18px;
   line-height: 140%;
+  position: relative;
+}
+
+aside .see_all::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--gray);
+  border: 8px solid var(--white);
+  border-radius: 50%;
+}
+
+aside .see_all:hover::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: none;
+  right: -20px;
+  background-image: url(/assets/icons/button-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 main {
@@ -268,10 +344,33 @@ main .top_sales .tab .tab_item {
   padding: 15px 0;
   text-transform: uppercase;
   cursor: pointer;
+  color: var(--black1);
+}
+
+main .top_sales .tab .tab_item.active {
+  color: var(--text-color2);
+  position: relative;
+}
+
+main .top_sales .tab .tab_item.active::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red-main);
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main .top_sales .tab .tab_item:hover {
+  color: var(--text-color2);
 }
 
 .slide-container {
   position: relative;
+  padding-top: 12px;
 }
 
 .swiper {
@@ -539,7 +638,8 @@ main .faq_title {
     display: none;
   }
 
-  .normal_text, .light_text {
+  .normal_text,
+  .light_text {
     font-size: 17px;
   }
 
@@ -560,9 +660,10 @@ main .faq_title {
 }
 
 @media screen and (max-width: 575px) {
-  header .secondary-nav__list--item:nth-child(2), header .secondary-nav__list--item:nth-child(3) {
+  header .secondary-nav__list--item:nth-child(2),
+  header .secondary-nav__list--item:nth-child(3) {
     display: none;
-  }  
+  }
 
   aside {
     padding: 60px 0;
