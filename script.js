@@ -36,7 +36,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-
 document.querySelectorAll(".faq-question").forEach((item) => {
   item.addEventListener("click", () => {
     const parent = item.parentNode;
@@ -49,3 +48,20 @@ document.querySelectorAll(".faq-question").forEach((item) => {
     });
   });
 });
+
+let isDrawerOpen = false;
+
+function toggleDrawer() {
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("drawerOverlay");
+
+  if (!isDrawerOpen) {
+    drawer.style.right = "0";
+    overlay.classList.add("active");
+    isDrawerOpen = true;
+  } else {
+    drawer.style.right = "-400px";
+    overlay.classList.remove("active");
+    isDrawerOpen = false;
+  }
+}

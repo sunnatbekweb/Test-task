@@ -79,7 +79,7 @@
       <button class="header_button">
         Добавить скидку
       </button>
-      <button class="menu">
+      <button class="menu" onclick="toggleDrawer()">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="8" fill="white" />
           <path d="M35 24H13" stroke="#248888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -89,6 +89,62 @@
       </button>
     </div>
   </header>
+  <div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
+
+  <div class="drawer" id="drawer">
+    <button class="close-btn" onclick="toggleDrawer()">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 3.00049L29 29.0005" stroke="#001C1C" stroke-width="2" stroke-linecap="round" />
+        <path d="M3 28.9995L29 2.99954" stroke="#001C1C" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__list--item">
+          <a href="#">
+            <svg width="24" height="24">
+              <use xlink:href="/assets/icons/sprite.svg#list">
+            </svg>
+            <p>Все предложения</p>
+          </a>
+        </li>
+        <li class="nav__list--item">
+          <a href="#">Скидки</a>
+        </li>
+        <li class="nav__list--item">
+          <a href="#">Акции</a>
+        </li>
+        <li class="nav__list--item">
+          <a href="#">Промокоды</a>
+        </li>
+        <li class="nav__list--item">
+          <a href="#">Кешбэк</a>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="secondary-nav__list">
+      <li class="secondary-nav__list--item">
+        <a href="#">
+          <svg width="19" height="17">
+            <use xlink:href="/assets/icons/sprite.svg?v=1#telegram">
+          </svg>
+        </a>
+      </li>
+      <li class="secondary-nav__list--item">
+        <a href="#">
+          <svg width="48" height="48">
+            <use xlink:href="/assets/icons/sprite.svg?v=1#cabinet">
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <button class="drawer_btn">
+      Добавить скидку
+    </button>
+  </div>
+
   <div class="container wrapper">
     <aside>
       <h3>Скидки дня</h3>
